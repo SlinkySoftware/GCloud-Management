@@ -6,13 +6,17 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
+    
     <groupId>com.slinkytoybox.gcloud</groupId>
     <artifactId>gcloudmanagement</artifactId>
+    
     <version>0.0.1-SNAPSHOT</version>
+    
     <name>Genesys Cloud Management Tool</name>
     <description>Web based tool for configuration Genesys Cloud</description>
+    
     <url>https://github.com/SlinkySoftware/GCloud-Management</url>
     <issueManagement>
         <url>https://github.com/SlinkySoftware/GCloud-Management/issues</url>
@@ -21,24 +25,27 @@
     <scm>
         <url>https://github.com/SlinkySoftware/GCloud-Management.git</url>
     </scm>
+    
     <developers>
         <developer>
             <name>Michael Junek</name>
             <email>michael@juneks.com.au</email>
         </developer>
     </developers>
+    
     <licenses>
         <license>
             <name>GNU Affero General Public License v3.0 or later</name>
             <url>https://www.gnu.org/licenses/agpl-3.0.en.html</url>
         </license>
     </licenses>
+    
     <properties>
         <java.version>17</java.version>
-        <spring-cloud-azure.version>4.4.0</spring-cloud-azure.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -80,7 +87,7 @@
             <version>4.2.0</version>
         </dependency>-->
         
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>-->
@@ -119,21 +126,27 @@
             <artifactId>querydsl-jpa</artifactId> 
             <version>5.0.0</version> 
         </dependency>-->
-        <!--        <dependency>
+        <dependency>
             <groupId>org.sonarsource.scanner.maven</groupId>
             <artifactId>sonar-maven-plugin</artifactId>
             <version>3.9.1.2184</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        
+        <dependency>
+            <groupId>com.mypurecloud</groupId>
+            <artifactId>platform-client-v2</artifactId>
+            <version>161.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
         <finalName>${project.artifactId}-${project.version}.${git.branch.clean}.${git.commit.id.abbrev}</finalName>
-                <plugins>
+        <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
