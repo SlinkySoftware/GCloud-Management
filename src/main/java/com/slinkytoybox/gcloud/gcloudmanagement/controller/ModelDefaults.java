@@ -52,11 +52,8 @@ public class ModelDefaults {
     @Value("${info.build.version}")
     String buildVersion;
 
-    @Value("${company.logo}")
-    String companyLogo;
-    
-    @Value("${company.favicon}")
-    String favIcon;
+    @Value("${app.logo}")
+    String appLogo;
     
     
     public void updateModelDefaults(Model model, String pageTitle, String navBarFragment, String moduleName, String activeLink) {
@@ -66,8 +63,7 @@ public class ModelDefaults {
         String appVer = buildName + " v" + buildVersion;
         model.addAttribute("appver", appVer);
         model.addAttribute("pagetitle", appName + " / " + pageTitle + " (" + companyName + ")");
-        model.addAttribute("companylogo", companyLogo);
-        model.addAttribute("favicon", favIcon);
+        model.addAttribute("appLogo", appLogo);
         model.addAttribute("appname", appName);
         model.addAttribute("copyright", appCopyright);
 
