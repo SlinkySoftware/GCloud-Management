@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  gcloudmanagement - index.html
+  gcloudmanagement - error-403.html
 
   Copyright (c) 2022-2022, Slinky Software
 
@@ -18,27 +18,23 @@
   AGPL-3.0.md supplied with the source code.
 
 -->
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta th:replace="segments/scripts :: header" th:remove="tag"></meta>
+        <div th:replace="segments/scripts :: header" th:remove="tag"></div>
         <title th:text="${pagetitle}"></title>
     </head>
     <body>
         <div class="container-fluid">
-            <div th:replace="segments/header :: header" ></div>
+            <div th:replace="segments/header :: header" >Header</div>
 
-            <div class="row justify-content-left">
-                <div class="col-8 text-left"><h3>Genesys Cloud Management Tool</h3></div>
+            <div class="alert alert-danger mx-3" role="alert">
+                Error: Access Denied. You are not permitted to use portion of the application.
             </div>
-            <div class="row">&nbsp;</div>
-            <div class="row justify-content-left">
-                <div class="col-8 text-left">Please select a function from the menu above.</h2></div>
-            </div>
-
-
-            <div th:replace="segments/header :: footer" th:remove="tag"></div>
+            
+            <div th:replace="segments/header:: footer">Footer</div>
         </div>
     </body>
 </html>

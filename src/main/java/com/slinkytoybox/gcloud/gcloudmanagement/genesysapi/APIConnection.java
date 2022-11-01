@@ -114,4 +114,10 @@ public class APIConnection {
         log.trace("{}Leaving Method", logPrefix);
     }
     
+    public ApiClient getApiClient() {
+        final String logPrefix = "getApiClient() - ";
+        log.trace("{}Entering Method", logPrefix);
+        return apiClient;
+    }
+    
 }

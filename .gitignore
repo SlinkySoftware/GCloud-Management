@@ -14,3 +14,4 @@
 !**/src/test/**/build/
 /target/**
 /target/
+/config/**
