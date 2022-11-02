@@ -1,5 +1,5 @@
 /*
- *   gcloudmanagement - Role4.java
+ *   gcloudmanagement - RoleAdmin.java
  *
  *   Copyright (c) 2022-2022, Slinky Software
  *
@@ -31,7 +31,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
  */
 @Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-@PreAuthorize("hasRole('ROLE4')")
-public @interface Role4 {
+@PreAuthorize("hasRole('ADMIN')")
+public @interface RoleAdmin {
     
 }
